@@ -15,6 +15,11 @@ li{
 a{
     text-decoration: none;
 }
+
+header,footer,section{
+    display: flex;
+    justify-content: center;
+}
 .container{
     width: 1140px;
     display: flex;

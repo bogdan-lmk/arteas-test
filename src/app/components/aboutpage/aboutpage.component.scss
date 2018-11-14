@@ -1,0 +1,30 @@
+.content--about{
+    width: 100%;
+    display: flex;
+}
+.card-side{
+    width: 50%;
+    display:flex;
+    flex-flow: wrap;
+    background: blue;
+    justify-content: space-between;
+    padding-right: 100px;
+    padding-left: 60px;
+    padding-top: 150px;
+    padding-bottom: 85px;
+    background: #eeeeee;
+}
+
+.text-side{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
+.card-text{
+    color: rgba(0, 0, 0, 0.871);
+    line-height: 2;
+    font-size: 14px;
+}
+  

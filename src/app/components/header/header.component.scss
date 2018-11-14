@@ -1,6 +1,4 @@
 header{
-    display:flex;
-    justify-content: center;
     background: #00897b;
     padding: 10px 0;
 }
@@ -25,4 +23,27 @@ header{
 .nav-link{
     text-transform: uppercase;
     color: #ffffff;
+    position:relative;
+    &::after{
+        content: '';
+        width: 100%;
+        background: transparent;
+        height: 3px;
+        position: absolute;
+        top:40px;
+        left: 0;
+        transition: 0.3s ease-in;
+    }
+    &:hover:after{
+        background: #ffffff;
+        transition: 0.3s ease-in;
+    }
+}
+
+.nav-link.active{
+    &::after{
+        background: #ffffff;
+        transition: 0.3s ease-in;
+    }
+
 }

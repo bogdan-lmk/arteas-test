@@ -1,0 +1,13 @@
+<section class="section">
+  <div class="container">
+    <div class="content--about">
+      <div class="card-side">
+          <app-card *ngFor='let card of cards'  [card]="card" (click)="textBlock = card.text"> </app-card>
+      </div>
+      <div class="text-side">
+        <p class="card-text">{{ textBlock }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+

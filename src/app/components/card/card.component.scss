@@ -1,0 +1,32 @@
+.card{
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: red;
+    margin-bottom: 35px;
+    cursor:pointer;
+    box-shadow: 0px 1px 6.86px 0.14px rgba(0, 0, 0, 0.16);
+}
+
+
+.card-actions{
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.action{
+    margin-right: 20px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.icon-action{
+    width: 19px;
+    height: 19px;
+    fill: #757575;
+}
+
