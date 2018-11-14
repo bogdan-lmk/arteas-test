@@ -1,0 +1,28 @@
+header{
+    display:flex;
+    justify-content: center;
+    background: #00897b;
+    padding: 10px 0;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.navigation{
+    display: flex;
+}
+
+.nav-li{
+    margin-right: 30px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.nav-link{
+    text-transform: uppercase;
+    color: #ffffff;
+}
