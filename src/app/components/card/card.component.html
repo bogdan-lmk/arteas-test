@@ -4,7 +4,7 @@
     <div class="title-row"><h3 class="card-title">{{ card.title }}</h3></div>
   </div>
   <div class="card-actions">
-    <div class="action"><svg-icon (click)="onClick()" [ngClass]="{'marked': isMarked}" icon="like" class="icon-action"></svg-icon></div>
+    <div class="action"><svg-icon (click)="toFavorite()" [class.marked]="favorite" icon="like" class="icon-action"></svg-icon></div>
     <div class="action"><svg-icon icon="bookmark-black-shape" class="icon-action"></svg-icon></div>
     <div class="action"><svg-icon icon="share" class="icon-action"></svg-icon></div>
 </div>

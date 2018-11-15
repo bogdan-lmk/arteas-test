@@ -9,15 +9,23 @@ export class CardComponent implements OnInit {
 
   @Input() card;
 
-
-  isMarked = false;
+  public favorite: boolean;
   
-  onClick(){
-    this.isMarked = !this.isMarked;
+  toFavorite(){
+    this.favorite = !this.favorite;
+    const favorites = (
+      JSON.parse(
+        localStorage.getItem('favorites') || '{}'
+      )
+    );
+    favorites[this.card.id] = this.favorite;
+    localStorage.setItem('favorites', JSON.stringify(favorites));
   }
-  constructor() { }
+
+  constructor() {}
   
   ngOnInit() {
+    this.favorite = JSON.parse(localStorage.getItem('favorites') || '{}')[this.card.id];
   }
 
 }
