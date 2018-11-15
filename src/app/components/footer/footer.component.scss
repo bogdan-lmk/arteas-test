@@ -52,3 +52,12 @@ footer{
     color: #ffffff;
     font-size: 14px;
 }
+
+@media(max-width:460px){
+    .content--footer{
+        flex-direction: column;
+    }
+    .socials-row{
+        margin: 20px 0;
+    }
+}

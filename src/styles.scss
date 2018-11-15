@@ -16,12 +16,26 @@ a{
     text-decoration: none;
 }
 
+img{
+    max-width: 100%;
+}
 header,footer,section{
     display: flex;
     justify-content: center;
 }
 .container{
     width: 1140px;
+    margin: 0 15px;
     display: flex;
 }
 
+@media(max-width:1139px){
+    .container{
+        width: 960px;
+    }
+}
+@media(max-width:768px){
+    .container{
+        width: 100%;
+    }
+}

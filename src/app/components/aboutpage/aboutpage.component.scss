@@ -1,19 +1,31 @@
 .content--about{
     width: 100%;
     display: flex;
+    
 }
 .card-side{
     width: 50%;
     display:flex;
     flex-flow: wrap;
-    background: blue;
     justify-content: space-between;
     padding-right: 100px;
     padding-left: 60px;
     padding-top: 150px;
     padding-bottom: 85px;
     background: #eeeeee;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        background: #eeeeee;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        top:0;
+        z-index: -1;
+    }
 }
+
 
 .text-side{
     width: 50%;
@@ -28,3 +40,62 @@
     font-size: 14px;
 }
   
+@media(max-width:1139px){
+    .card-side{
+        padding-right: 60px;
+        padding-left: 0px
+    }
+    .text-side{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media(max-width:939px){
+    .content--about{
+        flex-flow: wrap;
+    }
+    .card-side{
+        width: 100%;
+        padding: 25px;
+        &::before{
+            content: '';
+            position: absolute;
+            background: #eeeeee;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+            top:0;
+            z-index: -1;
+        }
+    }
+    .text-side{
+        width: 100%;
+        padding: 50px 100px;
+    }
+}
+@media(max-width:768px){
+    .card-side{
+        width: 100%;
+        padding: 25px 0;
+    }
+    
+}
+@media(max-width:589px){
+    .card-side{
+        width: 100%;
+        padding: 25px;
+    }
+    .text-side{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media(max-width:460px){
+    .card-side{
+        width: 100%;
+        padding: 25px;
+        justify-content: center;
+    }
+}

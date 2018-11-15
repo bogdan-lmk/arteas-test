@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  isChanged = false;
+  isOpen = false;
+  onClick(){
+    this.isChanged = !this.isChanged;
+    this.isOpen = !this.isOpen;
+  }
+
   constructor() { }
 
   ngOnInit() {

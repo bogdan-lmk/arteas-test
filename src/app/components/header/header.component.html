@@ -1,4 +1,22 @@
 <header>
+    <nav class="navigation--mobile" [ngClass]="{'open': isOpen}" >
+        <li class="nav-li">
+          <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          
+        </li>
+        <li class="nav-li">
+            <a class="nav-link" routerLink="/about" routerLinkActive="active">about us</a>
+          </li>  
+          <li class="nav-li">
+              <a class="nav-link" href="">gallery</a>
+            </li>  
+            <li class="nav-li">
+                <a class="nav-link" href="">reviews</a>
+              </li>  
+              <li class="nav-li">
+                  <a class="nav-link" href="">contacts</a>
+                </li>    
+      </nav>
   <div class="container">
     <div class="content">
       <div class="logo">
@@ -24,6 +42,11 @@
                     <a class="nav-link" href="">contacts</a>
                   </li>    
         </nav>
+        <div class="menu-icon" (click)="onClick()">
+            <div class="bar1" [ngClass]="{'change': isChanged}"></div>
+            <div class="bar2" [ngClass]="{'change': isChanged}"></div>
+            <div class="bar3" [ngClass]="{'change': isChanged}"></div>
+        </div>
     </div>
   </div>
 </header>

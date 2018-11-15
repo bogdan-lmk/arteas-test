@@ -1,6 +1,6 @@
 header{
     background: #00897b;
-    padding: 10px 0;
+    position: relative;
 }
 
 .content{
@@ -8,6 +8,11 @@ header{
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    position: relative;
+}
+
+.logo{
+    margin: 10px 0;
 }
 .navigation{
     display: flex;
@@ -46,4 +51,68 @@ header{
         transition: 0.3s ease-in;
     }
 
+}
+
+.navigation--mobile{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar1.change  {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+ .bar2.change {opacity: 0;}
+
+ .bar3.change {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+@media(max-width:768px){
+    .menu-icon{
+        display: block;
+    }
+    .navigation--mobile {
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 100%;
+        z-index: 99;
+        background: #00897b;
+        display: flex;
+        transform: translate(-110%,0);
+        transition: 0.3s ease;
+    }
+    .open{
+        transform: translate(0,0);
+        transition: 0.3s ease;
+    }
+    .navigation{
+        display: none;
+    }
+    .nav-li[_ngcontent-c1] {
+        padding: 5px 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .nav-link::after {
+        display: none;
+    }
 }
